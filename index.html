@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My University Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail" id="rail"></aside>
+    <main id="main"></main>
+  </div>
+
+  <!-- Task dialog -->
+  <dialog id="taskDlg">
+    <form class="f" id="taskForm" method="dialog">
+      <h2 id="taskTitle" class="dlg-title">New task</h2>
+      <label>What needs to be done?<input id="tTitle" required placeholder="e.g. Problem set 4"></label>
+      <div class="two">
+        <label>Course<select id="tCourse"></select></label>
+        <label>Type<select id="tType"></select></label>
+      </div>
+      <label>Due date<input id="tDue" type="date"></label>
+      <label>Notes<textarea id="tNotes" placeholder="Questions 1–5, submit on Moodle"></textarea></label>
+      <div class="acts">
+        <button type="button" class="btn danger" id="tDel">Delete</button>
+        <div>
+          <button type="button" class="btn alt" id="tCancel">Cancel</button>
+          <button class="btn" id="tSave">Save</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Course dialog -->
+  <dialog id="courseDlg">
+    <form class="f" id="courseForm" method="dialog">
+      <h2 id="courseTitle" class="dlg-title">New course</h2>
+      <label>Course name<input id="cName" required placeholder="e.g. Calculus 1"></label>
+      <label>Lecturer / details (optional)<input id="cInfo" placeholder="Dr. Cohen · Mon 10:00"></label>
+      <div>
+        <div class="field-label">Color</div>
+        <div class="swatches" id="cColors"></div>
+      </div>
+      <div class="acts">
+        <button type="button" class="btn danger" id="cDel">Delete course</button>
+        <div>
+          <button type="button" class="btn alt" id="cCancel">Cancel</button>
+          <button class="btn">Save</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast"><span id="toastMsg"></span><button id="toastUndo">Undo</button></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
