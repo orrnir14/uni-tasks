@@ -18,18 +18,18 @@
   <dialog id="taskDlg">
     <form class="f" id="taskForm" method="dialog">
       <h2 id="taskTitle" class="dlg-title">New task</h2>
-      <label>What needs to be done?<input id="tTitle" required placeholder="e.g. Problem set 4"></label>
+      <label><span data-i18n="taskWhat"></span><input id="tTitle" required data-i18n-placeholder="taskPlaceholder"></label>
       <div class="two">
-        <label>Course<select id="tCourse"></select></label>
-        <label>Type<select id="tType"></select></label>
+        <label><span data-i18n="course"></span><select id="tCourse"></select></label>
+        <label><span data-i18n="type"></span><select id="tType"></select></label>
       </div>
-      <label>Due date<input id="tDue" type="date"></label>
-      <label>Notes<textarea id="tNotes" placeholder="Questions 1–5, submit on Moodle"></textarea></label>
+      <label><span data-i18n="dueDate"></span><input id="tDue" type="date"></label>
+      <label><span data-i18n="notes"></span><textarea id="tNotes" data-i18n-placeholder="notesPlaceholder"></textarea></label>
       <div class="acts">
-        <button type="button" class="btn danger" id="tDel">Delete</button>
+        <button type="button" class="btn danger" id="tDel" data-i18n="delete"></button>
         <div>
-          <button type="button" class="btn alt" id="tCancel">Cancel</button>
-          <button class="btn" id="tSave">Save</button>
+          <button type="button" class="btn alt" id="tCancel" data-i18n="cancel"></button>
+          <button class="btn" id="tSave" data-i18n="save"></button>
         </div>
       </div>
     </form>
@@ -39,23 +39,23 @@
   <dialog id="courseDlg">
     <form class="f" id="courseForm" method="dialog">
       <h2 id="courseTitle" class="dlg-title">New course</h2>
-      <label>Course name<input id="cName" required placeholder="e.g. Calculus 1"></label>
-      <label>Lecturer / details (optional)<input id="cInfo" placeholder="Dr. Cohen · Mon 10:00"></label>
+      <label><span data-i18n="courseName"></span><input id="cName" required data-i18n-placeholder="coursePlaceholder"></label>
+      <label><span data-i18n="courseInfo"></span><input id="cInfo" data-i18n-placeholder="courseInfoPlaceholder"></label>
       <div>
-        <div class="field-label">Color</div>
+        <div class="field-label" data-i18n="color"></div>
         <div class="swatches" id="cColors"></div>
       </div>
       <div class="acts">
-        <button type="button" class="btn danger" id="cDel">Delete course</button>
+        <button type="button" class="btn danger" id="cDel" data-i18n="deleteCourse"></button>
         <div>
-          <button type="button" class="btn alt" id="cCancel">Cancel</button>
-          <button class="btn">Save</button>
+          <button type="button" class="btn alt" id="cCancel" data-i18n="cancel"></button>
+          <button class="btn" data-i18n="save"></button>
         </div>
       </div>
     </form>
   </dialog>
 
-  <div class="toast" id="toast"><span id="toastMsg"></span><button id="toastUndo">Undo</button></div>
+  <div class="toast" id="toast"><span id="toastMsg"></span><button id="toastUndo" data-i18n="undo"></button></div>
 
   <script src="app.js"></script>
 </body>
